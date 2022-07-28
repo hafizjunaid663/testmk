@@ -18,6 +18,9 @@
                             <field name="journal_id"
                                    attrs="{'invisible':[('register_payment','=',False)],'required':[('register_payment','!=',False)]}"
                                    domain="[('type','in',['bank','cash'])]"/>
+                            <field name="journal_id_two"
+                                   attrs="{'invisible':[('register_payment','=',False)],'required':[('register_payment','!=',False)]}"
+                                   domain="[('type','in',['bank','cash'])]"/>
                             <field name="inbound_payment_method_id"
                                    attrs="{'invisible':[('register_payment','=',False)],'required':[('register_payment','!=',False)]}"
                                    domain=""/>
