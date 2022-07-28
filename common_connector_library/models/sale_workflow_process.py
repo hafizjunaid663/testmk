@@ -29,6 +29,7 @@ class SaleWorkflowProcess(models.Model):
                                                      "generated based on Order date and if unchecked then, "
                                                      "the account journal entry will be generated based on Invoice Date")
     journal_id = fields.Many2one('account.journal', string='Payment Journal', domain=[('type', 'in', ['cash', 'bank'])])
+    journal_id_two = fields.Many2one('account.journal', string='Payment Journal Two', domain=[('type', 'in', ['cash', 'bank'])])
     sale_journal_id = fields.Many2one('account.journal', string='Sales Journal', default=_default_journal,
                                       domain=[('type', '=', 'sale')])
     picking_policy = fields.Selection([('direct', 'Deliver each product when available'),
